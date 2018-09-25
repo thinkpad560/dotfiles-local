@@ -1,0 +1,16 @@
+" disable plugs in base
+UnPlug 'vim-elixir'
+UnPlug 'vim-go'
+
+" personalize plugs
+Plug 'itchyny/lightline.vim'
+Plug 'jacoborus/tender.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'airblade/vim-gitgutter'
+Plug 'mattn/emmet-vim'
+" fzf
+" Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+Plug 'valloric/YouCompleteMe'
