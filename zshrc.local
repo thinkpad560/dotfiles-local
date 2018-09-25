@@ -1,0 +1,20 @@
+export ZSH=$HOME/.oh-my-zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(pyenv init -)"
+
+# . ~/.pyenv/versions/3.6.5/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+POWERLEVEL9K_MODE='awesome-patched'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="amuse"
+P9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
+POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
+POWERLEVEL9K_RBENV_PROMPT_ALWAYS_SHOW=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+
+# 非常重要！无此行，theme 无效
+source $ZSH/oh-my-zsh.sh
+
