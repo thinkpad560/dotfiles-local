@@ -1,6 +1,8 @@
 # Setting the prefix from C-b to C-a
 unbind C-b
 set -g prefix C-a
+# Ensure that we can send Ctrl-A to other apps 
+bind C-a send-prefix
 
 # decrease command delay (increases vim responsiveness)
 set -sg escape-time 1
