@@ -28,8 +28,8 @@ let g:lightline = {
       \ }
 
 " emmet
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css,erb EmmetInstall
 
 " junegunn/fzf.vim
 " 未设置，待细化
