@@ -38,13 +38,9 @@ windows:
       # synchronize: after
       panes:
         - $EDITOR 
-#        - bundle exec guard
+        - bundle exec guard
   - server: bundle exec rails s
-  - logs: 
-    layout: main-vertical
-    panes:
-      - tail -f log/development.log
-      - bundle exec guard
+  - logs: tail -f log/development.log
   - dbconsole: rails dbconsole
   - pry: pry -r ./config/environment.rb
   - shell:
