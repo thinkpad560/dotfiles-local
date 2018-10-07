@@ -3,6 +3,7 @@ UnPlug 'vim-elixir'
 UnPlug 'vim-go'
 
 " personalize plugs
+Plug 'takac/vim-hardtime'
 Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }

@@ -44,3 +44,9 @@ let g:ycm_collect_identifiers_from_tag_files=1 "使用ctags生成的tags文件
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" Vim HardTime
+let g:hardtime_default_on = 1
+let g:hardtime_showmsg = 1
+let g:hardtime_ignore_buffer_patterns = [ "CustomPatt[ae]rn", "NERD.*" ]
+let g:hardtime_ignore_quickfix = 1

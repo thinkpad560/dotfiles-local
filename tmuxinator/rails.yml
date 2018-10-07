@@ -1,5 +1,3 @@
-# ~/.tmuxinator/rails.yml
-
 name: rails
 root: ~/code.dev/ruby/rails/<%= @args[0] %>
 

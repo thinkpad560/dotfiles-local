@@ -1,5 +1,3 @@
-# ~/.tmuxinator/webtest.yml
-
 name: webtest
 root: ~/code.dev/webtest/learning-area
 
