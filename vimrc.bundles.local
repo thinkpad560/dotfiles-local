@@ -15,3 +15,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'valloric/YouCompleteMe'
+
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
