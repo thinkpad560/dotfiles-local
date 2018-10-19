@@ -4,7 +4,7 @@ UnPlug 'vim-go'
 
 " personalize plugs
 Plug 'takac/vim-hardtime'
-Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.uim'
 Plug 'jacoborus/tender.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
@@ -14,7 +14,7 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'valloric/YouCompleteMe'
+" Plug 'valloric/YouCompleteMe'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
