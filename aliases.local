@@ -2,3 +2,4 @@ alias ydl="youtube-dl --write-auto-sub --proxy socks5://127.0.0.1:1086"
 alias dots='cd ~/dotfiles-local'
 alias lc='cd ~/code.dev/ruby'
 alias pandocpdf="pandoc --template=$HOME/code.dev/templates/pm-template.latex --latex-engine=xelatex"
+alias et="emacs -nw"

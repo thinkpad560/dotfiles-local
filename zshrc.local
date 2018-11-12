@@ -18,3 +18,5 @@ ZSH_THEME="amuse"
 # 非常重要！无此行，theme 无效
 source $ZSH/oh-my-zsh.sh
 
+# 设置 Homebrew bottle 镜像
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
