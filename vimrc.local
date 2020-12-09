@@ -1,3 +1,7 @@
+" from practical vim
+" disabled octal number
+set nrformats=
+
 " key mappings
 " map a specific key for buffer
 nnoremap <silent> [b :bprevious<CR>
@@ -62,3 +66,6 @@ let g:vim_markdown_frontmatter=1
 
 set relativenumber
 highlight LineNr ctermfg = red
+
+" NeoCompleteEnable
+let g:neocomplete#enable_at_startup = 1

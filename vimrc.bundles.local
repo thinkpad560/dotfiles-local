@@ -4,7 +4,7 @@ UnPlug 'vim-go'
 
 " personalize plugs
 Plug 'takac/vim-hardtime'
-Plug 'itchyny/lightline.uim'
+Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
@@ -18,3 +18,5 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+
+Plug 'Shougo/neocomplete.vim'
