@@ -1,0 +1,183 @@
+tap "d12frosted/emacs-plus"
+tap "homebrew/bundle"
+tap "homebrew/cask", "https://mirrors.ustc.edu.cn/homebrew-cask.git"
+tap "homebrew/cask-fonts"
+tap "homebrew/core", "https://mirrors.ustc.edu.cn/homebrew-core.git"
+tap "homebrew/services"
+# tap "macvim-dev/macvim"
+tap "thoughtbot/formulae"
+# Spell checker with better logic than ispell
+brew "aspell"
+# Shell extension to jump to frequently used directories
+brew "autojump"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# High performance key/value database
+brew "berkeley-db"
+# GNU binary tools for native development
+brew "binutils", link: true
+# XML-based font configuration API for X Windows
+brew "fontconfig"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# Tool for automated testing of webapps across many browsers
+brew "chromedriver", link: false
+# Cross-platform make
+brew "cmake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Reimplementation of ctags(1)
+brew "ctags"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# File comparison utilities
+brew "diffutils"
+# Classic UNIX line editor
+brew "ed", args: ["with-default-names"], link: true
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Utility to determine file types
+brew "file-formula"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU awk utility
+brew "gawk"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Library access to GnuPG
+brew "gpgme"
+# MIME mail utilities
+brew "gmime"
+# C code prettifier
+brew "gnu-indent", args: ["with-default-names"]
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar", args: ["with-default-names"]
+# GNU implementation of which utility
+brew "gnu-which", args: ["with-default-names"]
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+# GNU grep, egrep and fgrep
+brew "grep", args: ["with-default-names"]
+# Popular GNU data compression program
+brew "gzip"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Improved top (interactive process viewer)
+brew "htop"
+# Add GitHub support to git on the command-line
+brew "hub"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick@6"
+# GNU utilities for networking
+brew "inetutils"
+# GNOME XML library
+brew "libxml2"
+# Make XML documents translatable through PO files
+brew "itstool"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Postgres C API library
+brew "libpq"
+# Library to render SVG files using Cairo
+brew "librsvg"
+# Keep your Mac's application settings in sync
+brew "mackup"
+# High performance, distributed memory object caching system
+brew "memcached"
+# Modern programming language in the Lisp/Scheme family
+brew "minimal-racket"
+# SMTP client that can be used as an SMTP plugin for Mutt
+# brew "msmtp"
+# Tool for searching e-mail messages stored in the maildir-format
+# brew "mu"
+# Platform built on V8 to build network applications
+brew "node"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Library and executable for using citeproc with pandoc
+brew "pandoc-citeproc"
+# General-purpose scripting language
+brew "php"
+# Object-relational database system
+brew "postgresql", restart_service: true
+# Python version management
+# brew "pyenv"
+# Install various Ruby versions and implementations
+brew "ruby-build"
+# Ruby version manager
+# brew "rbenv"
+# Reattach process (e.g., tmux) to background
+brew "reattach-to-user-namespace"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
+# Text replacement utility
+brew "rpl"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Terminal multiplexer with VT100/ANSI terminal emulation
+brew "screen"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Command-line interface for Spotify on a Mac
+brew "shpotify"
+# Prints a steam locomotive if you type sl instead of ls
+brew "sl"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extract, view, and test RAR archives
+brew "unrar"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Pager/text based browser
+# brew "w3m", link: false
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Watch files and take action when they change
+brew "watchman"
+# Display word differences between text files
+brew "wdiff", args: ["with-gettext"]
+# Internet file retriever
+brew "wget"
+# JavaScript package manager
+brew "yarn"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
+# UNIX shell (command interpreter)
+brew "zsh", args: ["without-etcdir"]
+brew "d12frosted/emacs-plus/emacs-plus@27"
+# management suite for dotfiles
+brew "thoughtbot/formulae/rcm"
+# cask "anki"
+cask "bartender"
+cask "font-hack-nerd-font"
+cask "font-iosevka"
+cask "font-sauce-code-pro-nerd-font"
+cask "karabiner-elements"
+cask "kite"
+# cask "macdown"
+# cask "marked"
+cask "postman"
+cask "screenflow"
+cask "vlc"
