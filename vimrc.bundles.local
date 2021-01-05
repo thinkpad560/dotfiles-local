@@ -19,4 +19,4 @@ Plug 'junegunn/fzf.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
-Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/neocomplete.vim'
