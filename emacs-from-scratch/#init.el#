@@ -1,0 +1,18 @@
+(setq inhibit-startup-message t)
+
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
+(set-fringe-mode 10)
+(setq-default line-spacing 4)
+(menu-bar-mode -1)
+(setq visible-bell t)
+
+(setq display-line-numbers 'relative)
+(which-key-mode)
+  :config
+  (setq which-key-idle-delay 1))
+
+(use-package ivy-rich
+  :init
+  (ivy-rich-mode 1))
