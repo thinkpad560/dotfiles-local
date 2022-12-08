@@ -50,12 +50,12 @@
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
-(package! solarized-theme)
-(package! feature-mode
-  :recipe (:host github :repo "michaelklishin/cucumber.el"))
+;; (package! solarized-theme)
+;; (package! feature-mode
+  ;; :recipe (:host github :repo "michaelklishin/cucumber.el"))
 (package! org-super-agenda)
-(package! planet-theme)
-(package! exec-path-from-shell)
+;; (package! planet-theme)
+;; (package! exec-path-from-shell)
 ;; (package! prettierr-js)
 ;; (package! indium)
 ;; (package! origami)
@@ -63,3 +63,11 @@
 ;; (package! sql-indent)
 ;; (package! deadgrep)
 ;; (package! evil-snipe)
+;; (package! org-roam
+  ;; :recipe (:host github :repo "org-roam/org-roam" :branch "v2"))
+;; (package! spacemacs-theme)
+
+(package! org-bullets)
+
+;; (package! face-remap)
+;; (package! mixed-pitch)

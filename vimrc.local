@@ -10,12 +10,17 @@ nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
 " colors
-colorscheme tender
-" test no pass in tmux @20180925!
 " If you have vim >=8.0 or Neovim >= 0.1.5
-" if (has("termguicolors"))
-"  set termguicolors
-" endif
+if (has("termguicolors"))
+ set termguicolors
+endif
+" colorscheme tender
+let g:neodark#terminal_transparent = 1 " default: 0
+let g:neodark#solid_vertsplit = 1 " default: 0
+let g:neodark#italics = 1 " default: 0
+
+colorscheme neodark
+" test no pass in tmux @20180925!
 
 
 " NERDTree
@@ -28,7 +33,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 set laststatus=2
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'neodark',
       \ }
 
 " emmet
@@ -50,10 +55,10 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Vim HardTime
-let g:hardtime_default_on = 1
-let g:hardtime_showmsg = 1
-let g:hardtime_ignore_buffer_patterns = [ "CustomPatt[ae]rn", "NERD.*" ]
-let g:hardtime_ignore_quickfix = 1
+" let g:hardtime_default_on = 1
+" let g:hardtime_showmsg = 1
+" let g:hardtime_ignore_buffer_patterns = [ "CustomPatt[ae]rn", "NERD.*" ]
+" let g:hardtime_ignore_quickfix = 1
 
 " Vim markdown
 let g:vim_markdown_folding_disabled = 1  "不折叠显示，默认是折叠显示，看个人习惯
@@ -69,3 +74,8 @@ highlight LineNr ctermfg = red
 
 " NeoCompleteEnable
 let g:neocomplete#enable_at_startup = 1
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() . "\<cr>" : "\<cr>"

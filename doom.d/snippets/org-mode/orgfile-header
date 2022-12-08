@@ -9,17 +9,18 @@
 #+AUTHOR:    ${2:`user-full-name`}
 #+EMAIL:     ${3:`user-mail-address`}
 
-#+OPTIONS: toc:nil
-#+OPTIONS: num:nil
-#+PANDOC_OPTIONS: variable:CJKmainfont:华文仿宋
-#+LATEX_COMPILER: xelatex
-#+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS: [a4paper]
-# 中文字符集
-#+LATEX_HEADER: \usepackage{xeCJK}
-# 中文字体
-#+LATEX_HEADER: \setCJKmainfont{Songti SC}
-# 去除目录中的框线
-#+LATEX_HEADER: \hypersetup{colorlinks=true,linkcolor=black}
 #+STARTUP: logdone
 #+STARTUP: lognotedone
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+
+#+LATEX_HEADER: \usepackage{ctex}
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{xpinyin}
+#+LATEX_HEADER: \geometry{top=5cm,bottom=5cm}
+# 去除目录中的框线
+#+LATEX_HEADER: \hypersetup{colorlinks=true,linkcolor=black}
+#+LATEX_CLASS: ctexart
+#+LATEX_CLASS_OPTIONS: [a4paper,twoside,11pt]
+#+LATEX_COMPILER: xelatex

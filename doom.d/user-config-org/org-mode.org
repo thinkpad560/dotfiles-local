@@ -10,8 +10,16 @@
 #+BEGIN_SRC emacs-lisp
 ;; key binding
 (global-set-key (kbd "C-c b") 'org-switchb)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c l") 'org-store-link)
 #+END_SRC
 
+* Bullets
+#+BEGIN_SRC emacs-lisp
+;; butllets
+(require 'org-superstar)
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+#+END_SRC
 * Capture Templates
 #+BEGIN_SRC emacs-lisp
 ;; capture templates
@@ -42,7 +50,7 @@
 ;;                "* EMAIL %? :EMAIL:\n%U" :clock-in t :clock-resume t)
 ;;               ("h" "Habit" entry (file "~/org/refile.org")
 ;;                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
-;; (setq org-log-done 'note)
+(setq org-log-done 'note)
 
 ;; Remove empty LOGBOOK drawers on clock out
 ;; defun bh/remove-empty-drawer-on-clock-out ()
@@ -69,34 +77,6 @@
 
 #+RESULTS:
 
-* Bullets
-#+BEGIN_SRC emacs-lisp
-;; butllets
-(require 'org-superstar)
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
-#+END_SRC
-* export to doc
-#+BEGIN_SRC emacs-lisp
-;; This setup is tested on Emacs 24.3 & Emacs 24.4 on Linux/OSX
-;; org v7 bundled with Emacs 24.3
-(setq org-export-odt-preferred-output-format "doc")
-;; org v8 bundled with Emacs 24.4
-(setq org-odt-preferred-output-format "doc")
-;; BTW, you can assign "pdf" in above variables if you prefer PDF format
-
-;; Only OSX need below setup
-(defun my-setup-odt-org-convert-process ()
-  (interactive)
-  (let ((cmd "/Applications/LibreOffice.app/Contents/MacOS/soffice"))
-    (when (and (eq system-type 'darwin) (file-exists-p cmd))
-      ;; org v7
-      (setq org-export-odt-convert-processes '(("LibreOffice" "/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to %f%x --outdir %d %i")))
-      ;; org v8
-      (setq org-odt-convert-processes '(("LibreOffice" "/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to %f%x --outdir %d %i"))))
-    ))
-(my-setup-odt-org-convert-process)
-#+END_SRC
-
 * org-super-agenda
 #+BEGIN_SRC emacs-lisp
 (after! org
@@ -118,16 +98,6 @@
     (org-super-agenda-mode)
     )
 )
-#+END_SRC
-* ox-pandoc
-#+BEGIN_SRC emacs-lisp
-(after! org
-  (use-package! ox-pandoc
-    :defer t
-    :config
-    (setq org-pandoc-options-for-latex-pdf '((pdf-engine . "xelatex")))
-    )
-  )
 #+END_SRC
 * journal
 #+BEGIN_SRC emacs-lisp
@@ -151,6 +121,38 @@
   (setq org-journal-file-header 'org-journal-file-header-func)
   ))
 
+#+END_SRC
+* export to doc
+#+BEGIN_SRC emacs-lisp
+;; This setup is tested on Emacs 24.3 & Emacs 24.4 on Linux/OSX
+;; org v7 bundled with Emacs 24.3
+(setq org-export-odt-preferred-output-format "doc")
+;; org v8 bundled with Emacs 24.4
+(setq org-odt-preferred-output-format "doc")
+;; BTW, you can assign "pdf" in above variables if you prefer PDF format
+
+;; Only OSX need below setup
+(defun my-setup-odt-org-convert-process ()
+  (interactive)
+  (let ((cmd "/Applications/LibreOffice.app/Contents/MacOS/soffice"))
+    (when (and (eq system-type 'darwin) (file-exists-p cmd))
+      ;; org v7
+      (setq org-export-odt-convert-processes '(("LibreOffice" "/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to %f%x --outdir %d %i")))
+      ;; org v8
+      (setq org-odt-convert-processes '(("LibreOffice" "/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to %f%x --outdir %d %i"))))
+    ))
+(my-setup-odt-org-convert-process)
+#+END_SRC
+
+* ox-pandoc
+#+BEGIN_SRC emacs-lisp
+(after! org
+  (use-package! ox-pandoc
+    :defer t
+    :config
+    (setq org-pandoc-options-for-latex-pdf '((pdf-engine . "xelatex")))
+    )
+  )
 #+END_SRC
 * python jupyter
 #+begin_src emacs-lisp

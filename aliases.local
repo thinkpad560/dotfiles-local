@@ -1,8 +1,7 @@
-alias ydl="youtube-dl --write-auto-sub -f 'bestvideo+bestaudio[ext=m4a]/best[ext=mp4]/best' --proxy socks5://127.0.0.1:1086"
-alias ydl-audio="youtube-dl -x --audio-format aac --audio-quality 0 --proxy socks5://127.0.0.1:1086"
+alias ydl="youtube-dl --write-auto-sub -f 'bestvideo+bestaudio[ext=m4a]/best[ext=mp4]/best' --proxy socks5://127.0.0.1:7890"
+alias ydl-audio="youtube-dl -x --audio-format aac --audio-quality 0 --proxy socks5://127.0.0.1:7890"
 alias dots='cd ~/dotfiles-local'
 alias lc='cd ~/code.dev/ruby'
 alias pandocpdf="pandoc --template=$HOME/dotfiles-local/pm-template.latex --pdf-engine=xelatex"
 alias et="emacs -nw"
 alias svim="vim -u ~/.SpaceVim/vimrc"
-alias mbrew="arch -x86_64 brew"
