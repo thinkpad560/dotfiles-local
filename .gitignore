@@ -1,2 +1,5 @@
+.DS_Store
+.ruby-version
+
 /emacs-from-scratch/auto-save-list/*
 /emacs-from-scratch/elpa/*
