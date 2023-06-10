@@ -244,3 +244,5 @@
 ;;  '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
 ;;  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
 ;;  '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
+
+(setq-default line-spacing 6)

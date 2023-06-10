@@ -71,3 +71,6 @@
 
 ;; (package! face-remap)
 ;; (package! mixed-pitch)
+
+;; (package! flycheck-eglot)
+;; :recipe (:host github :repo "rougier/nano-modeline"))
