@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  notebook:
+    # build: '.'
+    image: datanalysis-notebook
+    container_name: jupyterlab
+    # user: root
+    volumes:
+      - /Users/liuxin/code.dev/Learning:/home/patrick.liu/work
+    ports:
+      - "8888:8888"
+      # - "8501:8501"
+      # - "8050:8050"
+    environment:
+      - JUPYTER_LAB_ENABLE=yes
+      - NB_USER=patrick.liu
+      - CHOWN_HOME=yes
+      # - working_dir=/home/patrick.liu
+      # - GRANT_SUDO=yes
+    entrypoint: ["sh", "/home/patrick.liu/work/entrypoint.sh"]
